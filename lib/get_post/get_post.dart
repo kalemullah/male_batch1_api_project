@@ -21,9 +21,15 @@ class _GetPostState extends State<GetPost> {
               FutureBuilder(
                   future: model.getPostData(),
                   builder: (context, snapshot) {
+                    if (snapshot.hasError) {
+                      return Text('Error: ${snapshot.error}');
+                    } else if (snapshot.connectionState ==
+                        ConnectionState.waiting) {
+                      return const Center(child: CircularProgressIndicator());
+                    }
                     return Expanded(
                       child: ListView.builder(
-                          itemCount: snapshot.data!.length,
+                          itemCount: snapshot.data?.length,
                           itemBuilder: (context, index) {
                             return ListTile(
                               title: Text('${snapshot.data![index].title}'),

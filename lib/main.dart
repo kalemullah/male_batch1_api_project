@@ -1,5 +1,5 @@
 import 'package:apitesting/get_post/get_post.dart';
-import 'package:apitesting/waether/ui.dart';
+import 'package:apitesting/get_single_post/single_post.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -33,8 +33,8 @@ class MyApp extends StatelessWidget {
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
           useMaterial3: true,
         ),
-        home: Weather()
-        // const GetPost(),
+        home: SinglePost()
+        //const GetPost(),
         );
   }
 }
