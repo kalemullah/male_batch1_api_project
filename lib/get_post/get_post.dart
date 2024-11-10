@@ -23,11 +23,11 @@ class _GetPostState extends State<GetPost> {
                   builder: (context, snapshot) {
                     return Expanded(
                       child: ListView.builder(
-                          itemCount: model.postList.length,
+                          itemCount: snapshot.data!.length,
                           itemBuilder: (context, index) {
                             return ListTile(
-                              title: Text('${model.postList[index].title}'),
-                              subtitle: Text('${model.postList[index].body}'),
+                              title: Text('${snapshot.data![index].title}'),
+                              subtitle: Text('${snapshot.data![index].body}'),
                             );
                           }),
                     );
