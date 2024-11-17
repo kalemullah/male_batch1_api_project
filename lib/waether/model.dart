@@ -1,11 +1,11 @@
-class testclass {
+class weather {
   Request? request;
   Location? location;
   Current? current;
 
-  testclass({this.request, this.location, this.current});
+  weather({this.request, this.location, this.current});
 
-  testclass.fromJson(Map<String, dynamic> json) {
+  weather.fromJson(Map<String, dynamic> json) {
     request =
         json['request'] != null ? new Request.fromJson(json['request']) : null;
     location = json['location'] != null

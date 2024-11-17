@@ -1,5 +1,4 @@
 import 'dart:convert';
-
 import 'package:apitesting/get_single_post/single_post_model.dart';
 import 'package:flutter/material.dart';
 import 'package:http/http.dart' as http;
@@ -18,7 +17,6 @@ class SinglePostProvider extends ChangeNotifier {
     // print('maxdata $maxdata');
     if (response.statusCode == 200) {
       singlePostModel = SinglePostModel.fromJson(maxdata);
-
       notifyListeners();
     }
   }

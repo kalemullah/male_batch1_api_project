@@ -32,8 +32,9 @@ class _GetPostState extends State<GetPost> {
                           itemCount: snapshot.data?.length,
                           itemBuilder: (context, index) {
                             return ListTile(
-                              title: Text('${snapshot.data![index].title}'),
-                              subtitle: Text('${snapshot.data![index].body}'),
+                              title: Text('${snapshot.data![index].name}'),
+                              subtitle: Text(
+                                  '${snapshot.data![index].company!.name}'),
                             );
                           }),
                     );
